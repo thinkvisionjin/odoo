@@ -1,0 +1,65 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="xmgl.list">
+      <field name="name">xmgl list</field>
+      <field name="model">xmgl.xmgl</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="xmmc"/>
+             <field name="xmbh"/>
+             <field name="cgdw"/>
+             <field name="cgdwlxr"/>
+             <field name="xmfzr"/>
+             <field name="xmxzr"/>
+             <field name="xmje"/>
+             <field name="date"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="xmgl.action_window">
+      <field name="name">项目建档</field>
+      <field name="res_model">xmgl.xmgl</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- server action to the one above 
+
+    <record model="ir.actions.server" id="xmgl.action_server">
+      <field name="name">xmgl server</field>
+      <field name="model_id" ref="model_xmgl_xmgl"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+     <!--Top menu item -->
+    
+    <menuitem name="项目管理" id="xmgl.menu_root"/>
+    
+    <!-- menu categories -->
+    
+    <menuitem name="代理项目" id="xmgl.menu_1" parent="xmgl.menu_root"/>
+    <menuitem name="Menu 2" id="xmgl.menu_2" parent="xmgl.menu_root"/>
+    
+    <!-- actions -->
+    
+    <menuitem name="已建档项目" id="xmgl.menu_1_list" parent="xmgl.menu_1"
+              action="xmgl.action_window"/>
+    <!--
+    <menuitem name="Server to list" id="xmgl" parent="xmgl.menu_2"
+              action="xmgl.action_server"/>
+              -->
+  </data>
+</odoo>
