@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_xmgl_xmgl,xmgl.xmgl,model_xmgl_xmgl,,1,0,0,0
+xmgl_project_access_right_user,xmgl_project_access_right,model_xmgl_project,project_group_user,1,1,1,1
+xmgl_project_access_right_manager,xmgl_project_access_right,model_xmgl_project,project_group_manager,1,1,1,1

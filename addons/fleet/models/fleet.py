@@ -147,14 +147,21 @@ class FleetVehicle(models.Model):
 
     name = fields.Char(compute="_compute_vehicle_name", store=True)
     active = fields.Boolean(default=True)
+    #refernce to res.company
     company_id = fields.Many2one('res.company', 'Company')
     license_plate = fields.Char(required=True, help='License plate number of the vehicle (i = plate number for a car)')
     vin_sn = fields.Char('Chassis Number', help='Unique number written on the vehicle motor (VIN/SN number)', copy=False)
+    #refernce to res.partner
     driver_id = fields.Many2one('res.partner', 'Driver', help='Driver of the vehicle')
+    #refernce to fleet.vehicle.model 
     model_id = fields.Many2one('fleet.vehicle.model', 'Model', required=True, help='Model of the vehicle')
+    #refernce to fleet.vehicle.log.fuel
     log_fuel = fields.One2many('fleet.vehicle.log.fuel', 'vehicle_id', 'Fuel Logs')
+    #refernce to fleet.vehicle.log.services
     log_services = fields.One2many('fleet.vehicle.log.services', 'vehicle_id', 'Services Logs')
+    #refernce to fleet.vehicle.log.contract
     log_contracts = fields.One2many('fleet.vehicle.log.contract', 'vehicle_id', 'Contracts')
+    
     cost_count = fields.Integer(compute="_compute_count_all", string="Costs")
     contract_count = fields.Integer(compute="_compute_count_all", string='Contracts')
     service_count = fields.Integer(compute="_compute_count_all", string='Services')
@@ -162,11 +169,14 @@ class FleetVehicle(models.Model):
     odometer_count = fields.Integer(compute="_compute_count_all", string='Odometer')
     acquisition_date = fields.Date('Acquisition Date', required=False, help='Date when the vehicle has been bought')
     color = fields.Char(help='Color of the vehicle')
+    #refernce to fleet.vehicle.state 
     state_id = fields.Many2one('fleet.vehicle.state', 'State', default=_get_default_state, help='Current state of the vehicle', ondelete="set null")
     location = fields.Char(help='Location of the vehicle (garage, ...)')
     seats = fields.Integer('Seats Number', help='Number of seats of the vehicle')
     doors = fields.Integer('Doors Number', help='Number of doors of the vehicle', default=5)
+    #refernce to fleet.vehicle.tag
     tag_ids = fields.Many2many('fleet.vehicle.tag', 'fleet_vehicle_vehicle_tag_rel', 'vehicle_tag_id', 'tag_id', 'Tags', copy=False)
+    
     odometer = fields.Float(compute='_get_odometer', inverse='_set_odometer', string='Last Odometer', help='Odometer measure of the vehicle at the moment of this log')
     odometer_unit = fields.Selection([('kilometers', 'Kilometers'), ('miles', 'Miles')],
         'Odometer Unit', default='kilometers', help='Unit of the odometer ', required=True)

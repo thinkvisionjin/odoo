@@ -1,0 +1,139 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="xmgl_project_view_tree">
+      <field name="name">xmgl.project.tree</field>
+      <field name="model">xmgl.project</field>
+      <field name="arch" type="xml">
+        <tree>
+             <field name="name"/>
+             <field name="project_no"/>
+             <field name="customer_id"/>
+             <field name="contactor_id"/>
+             <field name="incharge_id"/>
+             <field name="assistant_id"/>
+             <field name="amount"/>
+             <field name="sale_date"/>
+             <field name="open_date"/>
+             <field name="state"/>
+        </tree>
+      </field>
+    </record>
+  <record model="ir.ui.view" id="xmgl_project_view_form">
+      <field name="name">xmgl.project.form</field>
+      <field name="model">xmgl.project</field>
+      <field name="arch" type="xml">
+        <form>
+          <header>
+          
+            <button states="open"  name="act_approve_submit"  type="object" class="oe_highlight" string="提交" groups="xmgl.project_group_user"/>
+            
+            <button states="waiting" name="act_approve_project" type="object" class="oe_highlight" string="同意" groups="xmgl.project_group_manager"/>
+            
+            <button states="waiting" name="act_reject_project"  type="object" class="oe_highlight" string="退回" groups="xmgl.project_group_manager"/>
+            <field name="state"  widget="statusbar" statusbar_clickable="False"/>
+          </header>
+          <sheet>
+              <group col="2">
+                  <group string="项目基本信息">
+                      <field name="name"/>
+                      <field name="project_no" required="1"/>
+                      <field name="customer_id" help=""/>
+                      <field name="contactor_id" help=""/>
+                      <field name="incharge_id" help=""/>
+                      <field name="assistant_id" help=""/>
+                      <field name="amount" help=""/>
+                  </group>
+                  <group  string="项目时间信息">
+                    <field name="sale_date"/>
+                    <field name="open_date"/>
+                  </group>
+              </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+          <record model="ir.ui.view" id="xmgl_project_view_calendar">
+            <field name="name">xmgl.project.calendar</field>
+            <field name="model">xmgl.project</field>
+            <field name="arch" type="xml">
+                <calendar string="项目日期表" color="state" date_start="sale_date">
+                    <field name="name"/>
+                    <field name="amount" widget="monetary"/>
+                </calendar>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="xmgl_project_view_graph">
+            <field name="name">xmgl.project.graph</field>
+            <field name="model">xmgl.project</field>
+            <field name="arch" type="xml">
+                <graph string="项目统计信息">
+                    <field name="incharge_id"/>
+                    <field name="amount" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="xmgl_project_view_pivot">
+            <field name="name">xmgl.project.graph</field>
+            <field name="model">xmgl.project</field>
+            <field name="arch" type="xml">
+                <pivot string="项目透视表">
+                    <field name="customer_id" type="row"/>
+                    <field name="amount" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+
+
+
+    <!-- actions opening views on models -->
+
+    <record model="ir.actions.act_window" id="xmgl.action_window">
+      <field name="name">项目建档</field>
+      <field name="res_model">xmgl.project</field>
+      <field name="view_mode">tree,form,calendar,graph,pivot</field>
+    </record>
+
+
+    <!-- server action to the one above -->
+
+    <!--<record model="ir.actions.server" id="xmgl.action_server">
+      <field name="name">xmgl server</field>
+      <field name="model_id" ref="model_xmgl_xmgl"/>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>-->
+    
+
+     <!--Top menu item -->
+    
+    <menuitem name="项目管理" id="xmgl.menu_root"/>
+    
+    <!-- menu categories -->
+    
+    <menuitem name="招标代理项目" id="xmgl.menu_1" parent="xmgl.menu_root"/>
+    <menuitem name="非代理项目" id="xmgl.menu_2" parent="xmgl.menu_root"/>
+    
+    <menuitem name="项目财务管理" id="xmgl.menu_3" parent="xmgl.menu_root"/>
+    
+    <!-- actions -->
+    <menuitem name="项目登记管理" id="xmgl.menu_1_list" parent="xmgl.menu_1" action="xmgl.action_window"/>
+    <menuitem name="采购文件管理" id="xmgl.menu_2_list" parent="xmgl.menu_1" action="xmgl.action_window"/>
+    <menuitem name="购买单位情况汇总表" id="xmgl.menu_3_list" parent="xmgl.menu_1" action="xmgl.action_window"/>
+    <menuitem name="中标通知书管理" id="xmgl.menu_4_list" parent="xmgl.menu_1" action="xmgl.action_window"/>
+   
+    <menuitem name="招标代理项目" id="xmgl.menu_1" parent="xmgl.menu_root"/>
+   
+    
+    <!--
+    <menuitem name="Server to list" id="xmgl" parent="xmgl.menu_2"
+              action="xmgl.action_server"/>
+    -->         
+  </data>
+</odoo>

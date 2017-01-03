@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "xmgl",
+    'name': "项目管理",
 
     'summary': """
         包含采购项目管理和非代理项目管理两类项目管理功能""",
@@ -23,8 +23,9 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
+        'security/xmgl_security.xml',
+        'security/ir.model.access.csv',
+        'views/xmgl_views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode

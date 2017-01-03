@@ -1,60 +1,16 @@
 <odoo>
     <data>
-          
-           <record id="object0" model="xmgl.xmgl"> 
-             <field name="xmmc">First Project</field> 
-             <field name="xmbh">201542542154</field> 
-             <field name="cgdw">13</field> 
-             <field name="cgdwlxr">8</field> 
-             <field name="xmfzr">4</field> 
-             <field name="xmxzr">5</field> 
-             <field name="xmje">102</field> 
-             <field name="date">2015-10-22</field> 
+           <record id="object0" model="xmgl.project"> 
+             <field name="name">First Project</field> 
+             <field name="project_no">201542542154</field> 
+             <field name="customer_id">13</field> 
+             <field name="contactor_id">8</field> 
+             <field name="incharge_id">51</field> 
+             <field name="assistant_id">6</field> 
+             <field name="amount">102</field> 
+             <field name="sale_date">2015-10-22</field>
+             <field name="open_date">2015-10-22</field>
+             <field name="state">open</field>
            </record> 
-          
-           <record id="object1" model="xmgl.xmgl"> 
-            <field name="xmmc">First Project</field> 
-             <field name="xmbh">201542542154</field> 
-             <field name="cgdw">13</field> 
-             <field name="cgdwlxr">8</field> 
-             <field name="xmfzr">4</field> 
-             <field name="xmxzr">5</field> 
-             <field name="xmje">102</field> 
-             <field name="date">2015-10-22</field> 
-           </record> 
-          
-           <record id="object2" model="xmgl.xmgl"> 
-            <field name="xmmc">First Project</field> 
-             <field name="xmbh">201542542154</field> 
-             <field name="cgdw">13</field> 
-             <field name="cgdwlxr">8</field> 
-             <field name="xmfzr">4</field> 
-             <field name="xmxzr">5</field> 
-             <field name="xmje">102</field> 
-             <field name="date">2015-10-22</field> 
-           </record> 
-          
-           <record id="object3" model="xmgl.xmgl"> 
-             <field name="xmmc">First Project</field> 
-             <field name="xmbh">201542542154</field> 
-             <field name="cgdw">13</field> 
-             <field name="cgdwlxr">8</field> 
-             <field name="xmfzr">4</field> 
-             <field name="xmxzr">5</field> 
-             <field name="xmje">102</field> 
-             <field name="date">2015-10-22</field> 
-           </record> 
-          
-           <record id="object4" model="xmgl.xmgl"> 
-             <field name="xmmc">First Project</field> 
-             <field name="xmbh">201542542154</field> 
-             <field name="cgdw">13</field> 
-             <field name="cgdwlxr">8</field> 
-             <field name="xmfzr">4</field> 
-             <field name="xmxzr">5</field> 
-             <field name="xmje">102</field> 
-             <field name="date">2015-10-22</field> 
-           </record> 
-          
     </data>
 </odoo>
