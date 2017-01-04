@@ -1,0 +1,12 @@
+<odoo>
+    <data> 
+           <record id="PROJECT_TYPE_DOMESTIC" model="xmgl.projecttype"> 
+             <field name="name">国内项目</field> 
+             <field name="code">DOMESTIC</field> 
+           </record>
+           <record id="PROJECT_TYPE_INTERNATIONAL" model="xmgl.projecttype"> 
+             <field name="name">国际项目</field> 
+             <field name="code">INTERNATIONAL</field> 
+           </record>
+    </data>
+</odoo>

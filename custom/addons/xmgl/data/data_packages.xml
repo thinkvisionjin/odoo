@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <record id="object0" model="xmgl.package"> 
+        	<!-- 采购包件基本内容-->
+            <field name="name">某部门信息化项目系统集成包</field> 
+            <field name="package_no">201542542154</field> 
+            <field name="package_status">1</field>
+            <field name="package_amount">1000000</field> 
+            <field name="package_assurance_amount">1000000</field> 
+            <field name="package_public_date">2015-9-22</field> 
+            <field name="package_open_date">2015-10-22</field> 
+            <field name="package_review_date">2015-11-01</field> 
+            <!-- 采购文件管理内容 -->
+            <field name="bidding_document_amount">1000</field> 
+            <field name="bidding_document_start_date">2015-12-22</field> 
+            <field name="bidding_document_end_date">2015-12-25</field> 
+            <field name="bidding_document_state">open</field> 
+            <field name="bidding_document_state">open</field>
+            <!-- 中标管理内容内容 -->
+            <field name="win_date">2016-01-22</field> 
+            <field name="win_amount_">1000000</field> 
+            <field name="win_compnay">13</field> 
+            <field name="win_service_rate">10</field> 
+            <field name="win_document_file">open</field> 
+        </record>
+    </data>
+</odoo>

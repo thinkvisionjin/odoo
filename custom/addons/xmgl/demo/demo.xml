@@ -1,4 +1,4 @@
-<odoo>
+<!-- <odoo>
     <data>
            <record id="object0" model="xmgl.project"> 
              <field name="name">First Project</field> 
@@ -13,4 +13,4 @@
              <field name="state">open</field>
            </record> 
     </data>
-</odoo>
+</odoo> -->

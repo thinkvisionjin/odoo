@@ -19,10 +19,18 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','mail'],
 
     # always loaded
     'data': [
+        'data/dict_package_status.xml',
+        'data/dict_project_fundsource.xml',
+        'data/dict_project_property.xml',
+        'data/dict_project_purchasestyle.xml',
+        'data/dict_project_status.xml',
+        'data/dict_project_type.xml',
+#         'data_packages.xml',
+#         'data_projects.xml',
         'security/xmgl_security.xml',
         'security/ir.model.access.csv',
         'views/xmgl_views.xml',
@@ -30,6 +38,6 @@
     ],
     # only loaded in demonstration mode
     'demo': [
-        'demo/demo.xml',
+#         'demo/demo.xml',
     ],
 }

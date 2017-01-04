@@ -1,0 +1,36 @@
+<odoo>
+    <data> 
+           <record id="PURCHASE_TYPE_DOMESTIC_PUBLIC" model="xmgl.purchasetype"> 
+             <field name="name">国内公开招标</field> 
+             <field name="code">DOMESTIC_PUBLIC</field> 
+           </record>
+           <record id="PURCHASE_TYPE_DOMESTIC_INVITATION" model="xmgl.purchasetype"> 
+             <field name="name">国内邀请招标</field> 
+             <field name="code">DOMESTIC_INVITATION</field> 
+           </record>
+           <record id="PURCHASE_TYPE_INQUIRY" model="xmgl.purchasetype"> 
+             <field name="name">询价采购</field> 
+             <field name="code">INQUIRY</field> 
+           </record>
+           <record id="PURCHASE_TYPE_COMPITITIVE_NEGOTIATION" model="xmgl.purchasetype"> 
+             <field name="name">竞争性谈判</field> 
+             <field name="code">COMPITITIVE_NEGOTIATION</field> 
+           </record>
+           <record id="PURCHASE_TYPE_COMPITITIVE_CONSULTATION" model="xmgl.purchasetype"> 
+             <field name="name">竞争性磋商</field> 
+             <field name="code">COMPITITIVE_CONSULTATION</field> 
+           </record>
+           <record id="PURCHASE_TYPE_SINGLE_SOURCE" model="xmgl.purchasetype"> 
+             <field name="name">单一来源采购</field> 
+             <field name="code">SINGLE_SOURCE</field> 
+           </record>
+           <record id="PURCHASE_TYPE_IMPORT_ARGUMENT" model="xmgl.purchasetype"> 
+             <field name="name">进口论证</field> 
+             <field name="code">IMPORT_ARGUMENT</field> 
+           </record>
+           <record id="PURCHASE_TYPE_OTHER" model="xmgl.purchasetype"> 
+             <field name="name">其他方式</field> 
+             <field name="code">OTHER</field> 
+           </record>
+    </data>
+</odoo>

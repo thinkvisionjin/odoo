@@ -1,0 +1,40 @@
+<odoo>
+    <data> 
+           <record id="PROJECT_STATUS_STARTUP" model="xmgl.projectstatus"> 
+             <field name="name">项目建档</field> 
+             <field name="code">STARTUP</field> 
+           </record>
+           <record id="PROJECT_STATUS_PUBLIC" model="xmgl.projectstatus"> 
+             <field name="name">项目公告</field> 
+             <field name="code">PUBLIC</field> 
+           </record>
+           <record id="PROJECT_STATUS_OPEN" model="xmgl.projectstatus"> 
+             <field name="name">项目开标</field> 
+             <field name="code">OPEN</field> 
+           </record>
+           <record id="PROJECT_STATUS_REVIEW" model="xmgl.projectstatus"> 
+             <field name="name">项目评标</field> 
+             <field name="code">REVIEW</field> 
+           </record>
+           <record id="PROJECT_STATUS_WINPUBLIC" model="xmgl.projectstatus"> 
+             <field name="name">中标公示</field> 
+             <field name="code">WINPUBLIC</field> 
+           </record>
+           <record id="PROJECT_STATUS_RETURNASS" model="xmgl.projectstatus"> 
+             <field name="name">退保证金</field> 
+             <field name="code">RETURNASS</field> 
+           </record>
+            <record id="PROJECT_STATUS_ABORT" model="xmgl.projectstatus"> 
+             <field name="name">项目流标</field> 
+             <field name="code">ABORT</field> 
+           </record>
+           <record id="PROJECT_STATUS_ARCHIVE" model="xmgl.projectstatus"> 
+             <field name="name">项目归档</field> 
+             <field name="code">ARCHIVE</field> 
+           </record>
+           <record id="PROJECT_STATUS_FINISH" model="xmgl.projectstatus"> 
+             <field name="name">项目完成</field> 
+             <field name="code">FINISH</field> 
+           </record>
+    </data>
+</odoo>

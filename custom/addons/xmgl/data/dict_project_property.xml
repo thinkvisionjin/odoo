@@ -1,0 +1,24 @@
+<odoo>
+    <data> 
+           <record id="PROJECT_PROPERTY_MECHANICAL_ELECTRICAL" model="xmgl.projectproperty"> 
+             <field name="name">机电招标项目</field> 
+             <field name="code">MECHANICAL_ELECTRICAL</field> 
+           </record>
+           <record id="PROJECT_PROPERTY_GOVERNMENT_PROCUREMENT" model="xmgl.projectproperty"> 
+             <field name="name">政府采购项目</field> 
+             <field name="code">GOVERNMENT_PROCUREMENT</field> 
+           </record>
+           <record id="PROJECT_PROPERTY_NATIONAL_DEBT" model="xmgl.projectproperty"> 
+             <field name="name">国债技改项目</field> 
+             <field name="code">NATIONAL_DEBT</field> 
+           </record>
+           <record id="PROJECT_PROPERTY_GP_ND" model="xmgl.projectproperty"> 
+             <field name="name">同属政府采购和国债技改项目</field> 
+             <field name="code">GP_ND</field> 
+           </record>
+           <record id="PROJECT_PROPERTY_CLASSIFIED" model="xmgl.projectproperty"> 
+             <field name="name">涉密项目</field> 
+             <field name="code">CLASSIFIED</field> 
+           </record>
+    </data>
+</odoo>

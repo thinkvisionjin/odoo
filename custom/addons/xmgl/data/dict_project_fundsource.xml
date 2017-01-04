@@ -1,0 +1,12 @@
+<odoo>
+    <data> 
+           <record id="FOUND_SOURCE_SELF" model="xmgl.fundsource"> 
+             <field name="name">自筹资金</field> 
+             <field name="code">SELF</field> 
+           </record>
+           <record id="FOUND_SOURCE_GOVERNMENT" model="xmgl.fundsource"> 
+             <field name="name">政府投资</field> 
+             <field name="code">GOVERNMENT</field> 
+           </record>
+    </data>
+</odoo>

@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+           <record id="object0" model="xmgl.project"> 
+             <field name="name">First Project</field> 
+             <field name="project_no">201542542154</field> 
+             <field name="project_type">1</field>
+             <field name="project_property">1</field>
+             <field name="project_status">1</field>
+             <field name="purchase_type">1</field>
+             <field name="fund_source">1</field> 
+             <field name="customer">13</field> 
+             <field name="contactor">8</field> 
+             <field name="employee_incharge">4</field> 
+             <field name="employee_assistant">5</field> 
+             <field name="tender_amount">10000000</field> 
+             <field name="packages_list">1</field> 
+             <field name="name">First Project</field> 
+             <field name="project_no">201542542154</field> 
+             <field name="customer_id">13</field> 
+             <field name="contactor_id">8</field> 
+             <field name="incharge_id">51</field> 
+             <field name="assistant_id">6</field> 
+             <field name="amount">102</field> 
+             <field name="sale_date">2015-10-22</field>
+             <field name="open_date">2015-10-22</field>
+             <field name="state">open</field>
+           </record> 
+          
+    </data>
+</odoo>
